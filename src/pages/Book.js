@@ -1,9 +1,22 @@
 import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Container, Typography } from '@material-ui/core'
+import { Container, Typography, Divider } from '@material-ui/core'
 import { FlipButton } from '../components/buttons'
 import { Spacer } from '../components/utils'
+import { Paragraph, Heading, Subheading } from '../styles/type'
 import FlipPage from 'react-flip-page'
+import faces from '../assets/faces.png'
+
+const shadow = theme => ({
+    content: '""', // ::before and ::after both require content
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundImage: theme.palette.gradients.page,
+    opacity: 0.5,
+})
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -34,28 +47,21 @@ const useStyles = makeStyles(theme => ({
     },
     page: {
         position: 'absolute',
+        display: 'flex',
+        flexDirection: 'column',
         //background: theme.palette.gradients.page,
         height: '100%',
         width: '50%',
         backgroundColor: '#FEFEFA',
         padding: '60px',
-        '&::before' : {
-            content: '""', // ::before and ::after both require content
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundImage: theme.palette.gradients.page,
-            opacity: 0.5
-        },
         '&.left': {
             right: '50%',
+            '&::before' : shadow(theme),
             borderRight: '2px solid #DDDDDD',
         },
         '&.right': {
             left: '50%',
-            transform: 'rotate(180deg)'
+            '&::before': {...shadow(theme),transform: 'rotate(180deg)'}
         }
     },
     back1: {
@@ -111,8 +117,9 @@ export default props => {
                         responsive
                         ref={(component) => { flipPage = component; }}
                     >
-                        <Pages num={1}/>
-                        <Pages num={2}/>
+                        {[...Array(9)].map((n,i)=>(
+                            <Pages num={i+1}/>
+                        ))}
                     </FlipPage>
                 </div>
             <FlipButton classes={{root: `${classes.flip} left`}} onClick={()=>{flipPage.gotoPreviousPage()}}/>
@@ -127,9 +134,24 @@ const Pages = ({num}) => {
     return (
         <div>
             <div className={`${classes.page} left`}>
-                <Typography variant='h1'>{`Chapter ${num}`}</Typography>
-                <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec purus sed ipsum iaculis aliquet nec ut orci. Nulla leo lacus, sagittis eu viverra ultrices, ultrices non tellus. Quisque convallis a ligula non pretium. Donec nec maximus lectus, ac commodo libero. Nullam eu sapien ligula. Praesent scelerisque vulputate arcu quis rutrum. Phasellus tincidunt lobortis enim, ac bibendum orci ultrices at. Integer et ornare velit.</Typography>
+                <Heading>{`Chapter ${num}`}</Heading>
+                <Spacer height={1}/>
+                <Subheading>A very interesting story</Subheading>
+                <Spacer height={2}/>
+                <Divider/>
+                <Spacer height={10}/>
+                <Paragraph first>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec purus sed ipsum iaculis aliquet nec ut orci. Nulla leo lacus, sagittis eu viverra ultrices, ultrices non tellus. Quisque convallis a ligula non pretium. Donec nec maximus lectus, ac commodo libero. Nullam eu sapien ligula. Praesent scelerisque vulputate arcu quis rutrum. Phasellus tincidunt lobortis enim, ac bibendum orci ultrices at. Integer et ornare velit.</Paragraph>
+                <Paragraph>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed luctus lacinia diam nec efficitur. Nam suscipit viverra dolor at tempus. Ut sollicitudin et nisl quis porta. Sed nec dolor a magna efficitur feugiat. Nullam iaculis imperdiet metus at viverra. Donec ac est eleifend, congue ipsum sed, porta justo. Mauris ultricies quam ut mi consequat porttitor. Ut pulvinar libero orci, ut posuere diam luctus non. Sed luctus purus leo, efficitur feugiat elit sagittis sed. Nam in tincidunt risus. Fusce congue nunc vel tincidunt eleifend. Sed vel interdum diam. Nullam leo ante, interdum in augue in, vehicula tincidunt lorem.</Paragraph>
             </div>
-            <div className={`${classes.page} right`}/>
+            <div className={`${classes.page} right`}>
+                <div style={{
+                    alignSelf: 'center',
+                    margin: 'auto',
+                    width: '80%'
+                }}>
+                    <img src={faces} width='100%'/>
+                    <Typography style={{fontFamily: 'abril-text'}}>A pretty picture.</Typography>
+                </div>
+            </div>
         </div>
 )}
