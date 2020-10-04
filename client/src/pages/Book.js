@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useSessionState } from '../context'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container, Typography, Divider } from '@material-ui/core'
 import { FlipButton } from '../components/buttons'
@@ -80,7 +81,6 @@ const useStyles = makeStyles(theme => ({
 
 }))
 
-
 export default props => {
     const classes = useStyles()
 
@@ -105,6 +105,18 @@ export default props => {
         }
     }
 
+    const NPAGES = 5
+    const [page,setPage] = useSessionState('page',1)
+
+    useEffect(() => {
+        if (page > NPAGES){
+            setPage(1)
+            flipPage.gotoPage(0)
+        }
+        else
+            flipPage.gotoPage(page-1)
+    },[])
+
     return (
         <Container component='main' className={classes.root}>
                 <div className={classes.back2}/>
@@ -117,13 +129,13 @@ export default props => {
                         responsive
                         ref={(component) => { flipPage = component; }}
                     >
-                        {[...Array(9)].map((n,i)=>(
+                        {[...Array(NPAGES)].map((n,i)=>(
                             <Pages num={i+1}/>
                         ))}
                     </FlipPage>
                 </div>
-            <FlipButton classes={{root: `${classes.flip} left`}} onClick={()=>{flipPage.gotoPreviousPage()}}/>
-            <FlipButton right classes={{root: `${classes.flip} right`}} onClick={()=>{flipPage.gotoNextPage()}}/>
+            <FlipButton classes={{root: `${classes.flip} left`}} onClick={()=>{flipPage.gotoPreviousPage(); setPage(page-1)}} hide={page==1}/>
+            <FlipButton right classes={{root: `${classes.flip} right`}} onClick={()=>{flipPage.gotoNextPage(); setPage(page+1)}} hide={page==NPAGES}/>
         </Container>
     )
 

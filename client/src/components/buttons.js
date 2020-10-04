@@ -57,8 +57,8 @@ const StyledFlipButton = withStyles(theme => ({
     }
 }))(Button)
 
-export const FlipButton = ({right, ...props}) => (
-    <StyledFlipButton {...props}>
+export const FlipButton = ({right,hide, ...props}) => (
+    <StyledFlipButton {...props} style={{display: hide ? 'none' : ''}}>
         <Left style={{fontSize:'2.2rem',transform:right?'rotate(180deg)':''}}/>
     </StyledFlipButton>
 )

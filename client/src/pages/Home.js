@@ -4,6 +4,7 @@ import { Container, Grow, Typography } from '@material-ui/core'
 import { PrimaryButton } from '../components/buttons'
 import Logo from '../assets/logo.png'
 import { Spacer } from '../components/utils'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -58,7 +59,7 @@ export default props => {
                         <b>Sharing Stories</b> is an interactive experience that tells the story of diversity through the perspectives of different people and backgrounds.
                     </Typography>
                     <Spacer height={8}/>
-                    <PrimaryButton>begin the story</PrimaryButton>
+                    <PrimaryButton component={Link} to='/book'>begin the story</PrimaryButton>
                 </div>
             </Grow>
         </Container>
