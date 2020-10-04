@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useSessionState } from '../context'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container, Typography, Divider } from '@material-ui/core'
@@ -83,6 +83,38 @@ const useStyles = makeStyles(theme => ({
 
 export default props => {
     const classes = useStyles()
+    const NPAGES = 5
+
+    const flipPage = useRef(null)
+
+
+    const [page,setPage] = useSessionState('page',1)
+
+    const prev = () => {
+        if (page > 1){
+            console.log('from prev',page)
+            flipPage.current.gotoPreviousPage()
+            
+        }
+    }
+    const next = () => {
+        if (page < NPAGES){
+            console.log('from next',page)
+            flipPage.current.gotoNextPage()
+            //console.log(page)
+            
+        }
+    }
+
+    const downHandler = ({ key }) => {
+        console.log('down')
+        if (key === 'ArrowLeft'){
+            prev()
+        }
+        if (key === 'ArrowRight'){
+            next()
+        }
+    }
 
     useEffect(() => {
         window.addEventListener('keydown', downHandler);
@@ -90,32 +122,21 @@ export default props => {
         return () => {
           window.removeEventListener('keydown', downHandler);
         };
-      }, []); // Empty array ensures that effect is only run on mount and unmount
-
-    let flipPage
-
-    const downHandler = ({ key }) => {
-        if (key === 'ArrowLeft'){
-            flipPage.gotoPreviousPage()
-            //console.log('prev')
-        }
-        if (key === 'ArrowRight'){
-            flipPage.gotoNextPage()
-            //console.log('next')
-        }
-    }
-
-    const NPAGES = 5
-    const [page,setPage] = useSessionState('page',1)
+      }, [downHandler]); // Empty array ensures that effect is only run on mount and unmount
 
     useEffect(() => {
+        console.log(page)
+    },[page])
+
+    useEffect(() => {
+        if (!flipPage.current) return
+        console.log('hey')
         if (page > NPAGES){
-            setPage(1)
-            flipPage.gotoPage(0)
+            flipPage.current.gotoPage(0)
         }
         else
-            flipPage.gotoPage(page-1)
-    },[])
+            flipPage.current.gotoPage(page-1)
+    },[flipPage])
 
     return (
         <Container component='main' className={classes.root}>
@@ -127,15 +148,16 @@ export default props => {
                         animationDuration={500}
                         uncutPages
                         responsive
-                        ref={(component) => { flipPage = component; }}
+                        ref={flipPage}
+                        onPageChange={(i)=>{setPage(i+1)}}
                     >
                         {[...Array(NPAGES)].map((n,i)=>(
                             <Pages num={i+1}/>
                         ))}
                     </FlipPage>
                 </div>
-            <FlipButton classes={{root: `${classes.flip} left`}} onClick={()=>{flipPage.gotoPreviousPage(); setPage(page-1)}} hide={page==1}/>
-            <FlipButton right classes={{root: `${classes.flip} right`}} onClick={()=>{flipPage.gotoNextPage(); setPage(page+1)}} hide={page==NPAGES}/>
+            <FlipButton classes={{root: `${classes.flip} left`}} onClick={()=>{prev()}} hide={page===1}/>
+            <FlipButton right classes={{root: `${classes.flip} right`}} onClick={()=>{next()}} hide={page===NPAGES}/>
         </Container>
     )
 
