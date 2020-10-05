@@ -92,22 +92,16 @@ export default props => {
 
     const prev = () => {
         if (page > 1){
-            console.log('from prev',page)
             flipPage.current.gotoPreviousPage()
-            
         }
     }
     const next = () => {
         if (page < NPAGES){
-            console.log('from next',page)
             flipPage.current.gotoNextPage()
-            //console.log(page)
-            
         }
     }
 
     const downHandler = ({ key }) => {
-        console.log('down')
         if (key === 'ArrowLeft'){
             prev()
         }
@@ -124,13 +118,9 @@ export default props => {
         };
       }, [downHandler]); // Empty array ensures that effect is only run on mount and unmount
 
-    useEffect(() => {
-        console.log(page)
-    },[page])
 
     useEffect(() => {
         if (!flipPage.current) return
-        console.log('hey')
         if (page > NPAGES){
             flipPage.current.gotoPage(0)
         }
