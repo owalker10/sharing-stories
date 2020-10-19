@@ -9,7 +9,7 @@ export const Paragraph = withStyles(theme => ({
     root: {
         fontFamily: 'abril-text, serif',
         fontWeight: 300,
-        fontSize: '1rem',
+        fontSize: '1.3rem',
         textIndent: '4ch',
         lineHeight: '1.5em',
         '&.first': {
@@ -26,7 +26,7 @@ export const Heading = withStyles(theme => ({
     root: {
         fontFamily: 'abril-display, serif',
         fontWeight: 400,
-        fontSize: '5rem'
+        fontSize: '4rem'
     }
 }))(props => ( <Typography variant='h1' component='h1' {...props}/> ))
 
@@ -35,7 +35,8 @@ export const Subheading = withStyles(theme => ({
     root: {
         fontFamily: 'abril-text, serif',
         fontWeight: 300,
-        fontSize: '1.5rem',
-        textIndent: '2ch'
+        fontSize: '1.7rem',
+        textIndent: '2ch',
+        opacity: 0.7
     }
 }))(props => ( <Typography variant='h2' component='h2' {...props}/> ))

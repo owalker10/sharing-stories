@@ -1,25 +1,44 @@
 {
   "files": {
     "main.css": "/static/css/main.69eda509.chunk.css",
-    "main.js": "/static/js/main.62e1dd94.chunk.js",
-    "main.js.map": "/static/js/main.62e1dd94.chunk.js.map",
+    "main.js": "/static/js/main.282dd3be.chunk.js",
+    "main.js.map": "/static/js/main.282dd3be.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3358e441.js",
     "runtime-main.js.map": "/static/js/runtime-main.3358e441.js.map",
-    "static/js/2.b296c66c.chunk.js": "/static/js/2.b296c66c.chunk.js",
-    "static/js/2.b296c66c.chunk.js.map": "/static/js/2.b296c66c.chunk.js.map",
+    "static/js/2.6beb13f4.chunk.js": "/static/js/2.6beb13f4.chunk.js",
+    "static/js/2.6beb13f4.chunk.js.map": "/static/js/2.6beb13f4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.ec216c38a5ad09ccc73fd484bfff9107.js": "/precache-manifest.ec216c38a5ad09ccc73fd484bfff9107.js",
+    "precache-manifest.87a1b92c5ce98189bc99b61cb0f82071.js": "/precache-manifest.87a1b92c5ce98189bc99b61cb0f82071.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.69eda509.chunk.css.map": "/static/css/main.69eda509.chunk.css.map",
-    "static/js/2.b296c66c.chunk.js.LICENSE.txt": "/static/js/2.b296c66c.chunk.js.LICENSE.txt",
+    "static/js/2.6beb13f4.chunk.js.LICENSE.txt": "/static/js/2.6beb13f4.chunk.js.LICENSE.txt",
+    "static/media/badminton.png": "/static/media/badminton.8c7aea25.png",
+    "static/media/chili_crab.png": "/static/media/chili_crab.705bbe1b.png",
+    "static/media/clothing.png": "/static/media/clothing.3e2b5300.png",
+    "static/media/clothing.gif": "/static/media/clothing.eedff4dc.gif",
     "static/media/faces.png": "/static/media/faces.654773cb.png",
+    "static/media/food.gif": "/static/media/food.3c5edde4.gif",
+    "static/media/food.png": "/static/media/food.b9a4db74.png",
+    "static/media/holidays.gif": "/static/media/holidays.23a8709a.gif",
+    "static/media/holidays.png": "/static/media/holidays.5b076857.png",
+    "static/media/kaya_toast.png": "/static/media/kaya_toast.de55e75d.png",
     "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg",
-    "static/media/logo.png": "/static/media/logo.ad3d96a9.png"
+    "static/media/logo.png": "/static/media/logo.ad3d96a9.png",
+    "static/media/map.gif": "/static/media/map.a37999c6.gif",
+    "static/media/map.png": "/static/media/map.ae723884.png",
+    "static/media/nasi_lemak.png": "/static/media/nasi_lemak.b4f13451.png",
+    "static/media/rugby.png": "/static/media/rugby.db0417e6.png",
+    "static/media/soccer.png": "/static/media/soccer.c3ef30cd.png",
+    "static/media/sports.gif": "/static/media/sports.515299a5.gif",
+    "static/media/sports.png": "/static/media/sports.d83e5d1d.png",
+    "static/media/stick.png": "/static/media/stick.39d34826.png",
+    "static/media/story.png": "/static/media/story.8e3bd9db.png",
+    "static/media/story.gif": "/static/media/story.c4f079bd.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.3358e441.js",
-    "static/js/2.b296c66c.chunk.js",
+    "static/js/2.6beb13f4.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.62e1dd94.chunk.js"
+    "static/js/main.282dd3be.chunk.js"
   ]
 }

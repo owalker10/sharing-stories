@@ -8,8 +8,8 @@ to deploy:
 'npm run build' in /web/client
 'cd ../..'
 'heroku login'
-'heroku git:remote -a billboard-viz'
-'git subtree push --prefix web heroku master'
+'heroku git:remote -a sharing-stories'
+'git push heroku master'
 
 */
 

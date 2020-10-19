@@ -7,6 +7,8 @@ import { Spacer } from '../components/utils'
 import { Paragraph, Heading, Subheading } from '../styles/type'
 import FlipPage from 'react-flip-page'
 import faces from '../assets/faces.png'
+import { TextBased, TableOfContents, Meet, Category } from '../components/pages'
+import chars from '../data/characters'
 
 const shadow = theme => ({
     content: '""', // ::before and ::after both require content
@@ -141,7 +143,7 @@ export default props => {
                         ref={flipPage}
                         onPageChange={(i)=>{setPage(i+1)}}
                     >
-                        {[...Array(NPAGES)].map((n,i)=>(
+                        {[...Array(3*chars.length+1)].map((n,i)=>(
                             <Pages num={i+1}/>
                         ))}
                     </FlipPage>
@@ -153,29 +155,27 @@ export default props => {
 
 }
 
-const Pages = ({num}) => {
+// must be 2 item array
+const ToPages = ({pages}) => {
     const classes = useStyles()
     return (
         <div>
             <div className={`${classes.page} left`}>
-                <Heading>{`Chapter ${num}`}</Heading>
-                <Spacer height={1}/>
-                <Subheading>A very interesting story</Subheading>
-                <Spacer height={2}/>
-                <Divider/>
-                <Spacer height={10}/>
-                <Paragraph first>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec purus sed ipsum iaculis aliquet nec ut orci. Nulla leo lacus, sagittis eu viverra ultrices, ultrices non tellus. Quisque convallis a ligula non pretium. Donec nec maximus lectus, ac commodo libero. Nullam eu sapien ligula. Praesent scelerisque vulputate arcu quis rutrum. Phasellus tincidunt lobortis enim, ac bibendum orci ultrices at. Integer et ornare velit.</Paragraph>
-                <Paragraph>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed luctus lacinia diam nec efficitur. Nam suscipit viverra dolor at tempus. Ut sollicitudin et nisl quis porta. Sed nec dolor a magna efficitur feugiat. Nullam iaculis imperdiet metus at viverra. Donec ac est eleifend, congue ipsum sed, porta justo. Mauris ultricies quam ut mi consequat porttitor. Ut pulvinar libero orci, ut posuere diam luctus non. Sed luctus purus leo, efficitur feugiat elit sagittis sed. Nam in tincidunt risus. Fusce congue nunc vel tincidunt eleifend. Sed vel interdum diam. Nullam leo ante, interdum in augue in, vehicula tincidunt lorem.</Paragraph>
+                {pages[0]}
             </div>
             <div className={`${classes.page} right`}>
-                <div style={{
-                    alignSelf: 'center',
-                    margin: 'auto',
-                    width: '80%'
-                }}>
-                    <img src={faces} width='100%'/>
-                    <Typography style={{fontFamily: 'abril-text'}}>A pretty picture.</Typography>
-                </div>
+                {pages[1]}
             </div>
         </div>
+    )
+
+}
+
+const Pages = ({num}) => {
+    const classes = useStyles()
+    return (
+        num == 1 ? <ToPages pages={TableOfContents}/>
+        : num % 3 == 2 ? <ToPages pages={Meet(0)}/>
+        : num % 3 == 1 ? <ToPages pages={Category(0,'sports')}/>
+        : <ToPages pages={Category(0,'food')}/>
 )}
