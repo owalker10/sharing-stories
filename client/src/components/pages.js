@@ -4,14 +4,14 @@ import { Paragraph, Heading, Subheading } from '../styles/type'
 import { Spacer } from './utils'
 import Portraits from './Portraits'
 import ClickOne from './ClickOne'
-import CategoryPictures from './Category'
+import CategoryPictures, { Map } from './Category'
 import characters from '../data/characters'
 import words from '../assets/words'
 
 export const TextBased = ({ heading, paragraphs, center, ...props }) => {
     return (<div style={ center ?
         {height: '100%', display: 'flex',flexDirection:'column',justifyContent:'center'} : {}
-        }>
+        }onClick={()=>{console.log('hello!')}}>
             {heading ? (<>
                 <Heading>{heading[0]}</Heading>
                 <Spacer height={1}/>
@@ -40,7 +40,7 @@ export const Meet = (i) => ([
         heading={[`Chapter ${i+1}`,characters[i].name]}
         paragraphs={characters[i].intro}
     />,
-    <ClickOne/>
+    <ClickOne char={characters[i].name}/>
 ])
 
 export const Category = (i,category) => ([
@@ -48,5 +48,7 @@ export const Category = (i,category) => ([
         center
         paragraphs={characters[i][category].text}
     />,
-    <CategoryPictures header={words[category].gif} images={characters[i][category].images}/>
+    (category == 'map' ? 
+    <Map header={words[category].gif} images={characters[i][category].images} />
+    : <CategoryPictures header={words[category].gif} images={characters[i][category].images}/>)
 ])

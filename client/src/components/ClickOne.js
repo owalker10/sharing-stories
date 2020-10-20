@@ -4,6 +4,7 @@ import { Spacer } from './utils'
 import Stick from '../assets/stick.png'
 import words from '../assets/words'
 import CG from '../components/ClickableGif'
+import { categories, goToPage } from '../pages/Book'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         gridTemplateColumns: '1fr 1fr 1fr',
         gridAutoRows: 'auto',
         gridAutoFlow: 'row',
-        gap: '30px',
+        gap: '15px',
         gridTemplateAreas: `
         "one   two    three"
         "four  person five"
@@ -40,7 +41,7 @@ const useStyles = makeStyles(theme => ({
 const clickables = ['clothing','food','holidays','map','sports']
 const order = ['two','four','five','eight','ten']
 
-export default () => {
+export default ({char}) => {
     const classes = useStyles()
     return (
         <div className={classes.root}>
@@ -48,7 +49,9 @@ export default () => {
             {clickables.map((name,i) => {
                 return (
                     <div className={classes.container} style={{gridArea: order[i]}}>
-                        <CG srcs={words[name]}/>
+                        <CG srcs={words[name]}
+                        onClick={(categories.includes(name) ? ()=>{goToPage(char,name)} : null)}
+                        />
                     </div>
                 )
             })}

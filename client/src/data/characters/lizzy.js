@@ -7,6 +7,10 @@ export default {
     },
     food: {
         text: ["Here's some text about the foods I like."],
-        images: [require('../../assets/food/chili_crab.png'),require('../../assets/food/kaya_toast.png'),require('../../assets/food/nasi_lemak.png')]
+        images: [require('../../assets/food/chili_crab.png'),require('../../assets/food/kaya_toast.png'),require('../../assets/food/nasi_lemak.png'),require('../../assets/food/satay.png')]
     },
+    map: {
+        text: ["Here's some text about Malaysia and Singapore","Hover over the map to see the region closer!"],
+        images: [require('../../assets/map/ms_far.png'),require('../../assets/map/ms_close.png')]
+    }
 }

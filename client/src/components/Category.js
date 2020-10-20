@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
         width: '90%',
         display: 'grid',
         gridTemplateColumns: 'auto',
-        gridAutoRows: '1fr',
+        gridAutoRows: 'auto',
         gridAutoFlow: 'row',
         justifyItems: 'center',
         //backgroundColor: theme.palette.primary.light,
@@ -31,6 +31,32 @@ const useStyles = makeStyles(theme => ({
         minWidth:0,
         minHeight: 0,
         maxHeight: '100%'
+    },
+    mapContainer: {
+        width: '100%',
+        position: 'relative',
+        '&:hover':{
+            '& .close': {
+                opacity:1
+            },
+            '& .far': {
+                opacity: 0
+            }
+        }
+    },
+    far: {
+        opacity: 1,
+        transition: '0.3s'
+    },
+    close: {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        opacity: 0,
+        transition: '0.3s',
+        margin: 'auto'
     }
 }))
 
@@ -60,6 +86,18 @@ export default ({header, images}) => {
             </div>
         </div>
     )
-    
-   
+}
+
+// should be two images, the first one being the zoom out and second being closeup
+export const Map = ({header, images}) => {
+    const classes = useStyles()
+    return (
+        <div className={classes.root}>
+            <img className={classes.header} src={header}/>
+            <div className={classes.mapContainer}>
+                <img className={`${classes.far} ${classes.img} far`} src={images[0]}/>
+                <img className={`${classes.close} ${classes.img} close`} src={images[1]}/>
+            </div>
+        </div>
+    )
 }

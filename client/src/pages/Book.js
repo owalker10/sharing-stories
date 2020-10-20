@@ -19,6 +19,8 @@ const shadow = theme => ({
     height: '100%',
     backgroundImage: theme.palette.gradients.page,
     opacity: 0.5,
+    pointerEvents :'none',
+    //zIndex: 0
 })
 
 const useStyles = makeStyles(theme => ({
@@ -57,6 +59,9 @@ const useStyles = makeStyles(theme => ({
         width: '50%',
         backgroundColor: '#FEFEFA',
         padding: '60px',
+        '& > *': {
+            //zIndex: '1',
+        },
         '&.left': {
             right: '50%',
             '&::before' : shadow(theme),
@@ -83,34 +88,67 @@ const useStyles = makeStyles(theme => ({
 
 }))
 
+
+export const categories = ['food','sports','map']
+// populate the pages
+let pages
+
+// 1 indexed ugh
+const getPage = (name,category) => {
+    const i = chars.findIndex(c => c.name == name)
+    const j = categories.indexOf(category) + 1 // 0 for "meet"
+    return i === -1 ? 0 : 1 + i*(1+categories.length) + j
+}
+
+
+let flipPage
+
+const pageNum = () => {
+    return flipPage.current ? flipPage.current.state.page : -1
+}
+
+export const prev = () => {
+    if (flipPage.current.state.page > 0){
+        flipPage.current.gotoPreviousPage()
+    }
+}
+export const next = () => {
+    console.log(flipPage.current)
+    if (flipPage.current.state.page < pages.length){
+        flipPage.current.gotoNextPage()
+    }
+}
+
+const downHandler = ({ key }) => {
+    if (key === 'ArrowLeft'){
+        prev()
+    }
+    if (key === 'ArrowRight'){
+        next()
+    }
+}
+
+export const goToPage = (name,category) => {
+    flipPage.current.gotoPage(getPage(name,category))
+}
+
+
 export default props => {
     const classes = useStyles()
     const NPAGES = 5
 
-    const flipPage = useRef(null)
+    flipPage = useRef(null)
+
+    pages = [TableOfContents]
+    chars.map((c,i)=>{
+        pages.push(Meet(i))
+        categories.map(c => {
+            pages.push(Category(i,c))
+        })
+    })
 
 
-    const [page,setPage] = useSessionState('page',1)
-
-    const prev = () => {
-        if (page > 1){
-            flipPage.current.gotoPreviousPage()
-        }
-    }
-    const next = () => {
-        if (page < NPAGES){
-            flipPage.current.gotoNextPage()
-        }
-    }
-
-    const downHandler = ({ key }) => {
-        if (key === 'ArrowLeft'){
-            prev()
-        }
-        if (key === 'ArrowRight'){
-            next()
-        }
-    }
+    const [page,setPage] = useSessionState('page',0)
 
     useEffect(() => {
         window.addEventListener('keydown', downHandler);
@@ -122,13 +160,16 @@ export default props => {
 
 
     useEffect(() => {
+        console.log(page)
         if (!flipPage.current) return
-        if (page > NPAGES){
+        if (page > pages.length){
             flipPage.current.gotoPage(0)
         }
         else
-            flipPage.current.gotoPage(page-1)
+            flipPage.current.gotoPage(page)
     },[flipPage])
+
+    console.log(page,pageNum(),flipPage)
 
     return (
         <Container component='main' className={classes.root}>
@@ -141,15 +182,13 @@ export default props => {
                         uncutPages
                         responsive
                         ref={flipPage}
-                        onPageChange={(i)=>{setPage(i+1)}}
+                        onPageChange={(i)=>{setPage(i)}}
                     >
-                        {[...Array(3*chars.length+1)].map((n,i)=>(
-                            <Pages num={i+1}/>
-                        ))}
+                        {pages.map(c=><ToPages pages={c}/>)}
                     </FlipPage>
                 </div>
-            <FlipButton classes={{root: `${classes.flip} left`}} onClick={()=>{prev()}} hide={page===1}/>
-            <FlipButton right classes={{root: `${classes.flip} right`}} onClick={()=>{next()}} hide={page===NPAGES}/>
+            <FlipButton classes={{root: `${classes.flip} left`}} onClick={()=>{prev()}} hide={page===0}/>
+            <FlipButton right classes={{root: `${classes.flip} right`}} onClick={()=>{next()}} hide={page===pages.length-1}/>
         </Container>
     )
 
@@ -168,14 +207,4 @@ const ToPages = ({pages}) => {
             </div>
         </div>
     )
-
 }
-
-const Pages = ({num}) => {
-    const classes = useStyles()
-    return (
-        num == 1 ? <ToPages pages={TableOfContents}/>
-        : num % 3 == 2 ? <ToPages pages={Meet(0)}/>
-        : num % 3 == 1 ? <ToPages pages={Category(0,'sports')}/>
-        : <ToPages pages={Category(0,'food')}/>
-)}

@@ -1,6 +1,8 @@
 import React from 'react'
 import { makeStyles, Typography } from '@material-ui/core'
 import { Spacer } from './utils'
+import { prev, next, goToPage } from '../pages/Book'
+import '../styles/keyframes.css'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -19,15 +21,45 @@ const useStyles = makeStyles(theme => ({
     container: {
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
     },
     portrait: {
         paddingTop: '100%',
-        backgroundColor: 'grey',
+        backgroundColor: theme.palette.primary.main,
         borderRadius: '5px',
+        width: '100%',
+        cursor: 'pointer',
+        marginTop: '10px',
+        transition: '0.5s',
+        position: 'relative',
+        '&:hover':{
+            marginTop: 0,
+            marginBottom: '10px',
+            boxShadow: theme.shadows[8],
+            '&::before': {
+                content: '""', // ::before and ::after both require content
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'white',
+                pointerEvents :'none',
+                animation: 'glow 1.2s linear 0s infinite alternate'
+                //animationName: 'glow'
+            }
+        },
+        '&.comingSoon': {
+            backgroundColor: 'lightgray',
+            pointerEvents: 'none'
+        }
+    },
+    name: {
+        fontSize: '1.3rem'
     }
 }))
 
-const fake = ['Lizzy','Joe','Mary','Theodore','Billy']
+const fake = ['Lizzy','Coming Soon','Coming Soon','Coming Soon','Coming Soon']
 
 export default () => {
     const classes = useStyles()
@@ -36,10 +68,10 @@ export default () => {
         <div className={classes.grid}>
             {fake.map(name => {
                 return (
-                    <div className={classes.container}>
-                        <div className={classes.portrait}/>
+                    <div className={classes.container} onClick={()=>{goToPage(name,'meet')}}>
+                        <div className={`${classes.portrait} ${name=='Coming Soon' ? 'comingSoon' : ''}`}/>
                         <Spacer height={1}/>
-                        <Typography>{name}</Typography>
+                        <Typography className={classes.name}>{name}</Typography>
                     </div>
                 )
             })}

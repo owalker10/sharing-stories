@@ -5,10 +5,11 @@ const bodyParser= require('body-parser')
 /*
 to deploy:
 
-'npm run build' in /web/client
-'cd ../..'
-'heroku login'
-'heroku git:remote -a sharing-stories'
+'npm run build' in /client
+COMMIT TO MASTER
+'cd ..'
+    'heroku login'
+    'heroku git:remote -a sharing-stories'
 'git push heroku master'
 
 */

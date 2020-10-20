@@ -1,0 +1,9 @@
+@keyframes glow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.25;
+    }
+}
