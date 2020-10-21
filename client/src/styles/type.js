@@ -9,7 +9,7 @@ export const Paragraph = withStyles(theme => ({
     root: {
         fontFamily: 'abril-text, serif',
         fontWeight: 300,
-        fontSize: '1.3rem',
+        fontSize: '1.3vw',
         textIndent: '4ch',
         lineHeight: '1.5em',
         '&.first': {

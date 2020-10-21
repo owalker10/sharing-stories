@@ -9,22 +9,19 @@ import characters from '../data/characters'
 import words from '../assets/words'
 
 export const TextBased = ({ heading, paragraphs, center, character, ...props }) => {
-    return (<div>
-            {heading ? (<>
-                <Heading>{heading[0]}</Heading>
-                <Spacer height={1}/>
-                <Subheading>{heading[1]}</Subheading>
+    return (<div style={{height:'100%', postition: 'relative', display: 'flex', flexDirection: 'column'}}>
+            {heading || character ? (<div style={center ? {position:'absolute', width: '100%'} : {}}>
+                {heading ? <>
+                    <Heading>{heading[0]}</Heading>
+                    <Spacer height={1}/>
+                </> : null }
+                <Subheading>{heading ? heading[1] : character}</Subheading>
                 <Spacer height={2}/>
                 <Divider/>
                 <Spacer height={10}/>
-            </>) : character ? (<>
-                <Subheading>{character}</Subheading>
-                <Spacer height={2}/>
-                <Divider/>
-                <Spacer height={10}/>
-            </>) : null}
+            </div>) : null}
             <div style={ center ?
-                {height: '100%', display: 'flex',flexDirection:'column',justifyContent:'center'} : {}
+                {display: 'flex',flexDirection:'column',justifyContent:'center', margin: 'auto'} : {}
                 }>
                 {paragraphs.map((p,i) => (
                     <Paragraph first={i==0 &&!center}>{p}</Paragraph>
