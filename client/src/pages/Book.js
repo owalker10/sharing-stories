@@ -1,14 +1,17 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useSessionState } from '../context'
 import { makeStyles } from '@material-ui/core/styles'
+import { Home, FormatListBulleted, Help, Menu } from '@material-ui/icons'
 import { Container, Typography, Divider } from '@material-ui/core'
-import { FlipButton } from '../components/buttons'
+import { FlipButton, SpeedDial } from '../components/buttons'
+import { OkayDialog } from '../components/dialogs'
+import { TextBased, TableOfContents, Meet, Category } from '../components/pages'
 import { Spacer } from '../components/utils'
 import { Paragraph, Heading, Subheading } from '../styles/type'
 import FlipPage from 'react-flip-page'
 import faces from '../assets/faces.png'
-import { TextBased, TableOfContents, Meet, Category } from '../components/pages'
 import chars from '../data/characters'
+import { useHistory } from 'react-router-dom'
 
 const shadow = theme => ({
     content: '""', // ::before and ::after both require content
@@ -113,7 +116,6 @@ export const prev = () => {
     }
 }
 export const next = () => {
-    console.log(flipPage.current)
     if (flipPage.current.state.page < pages.length){
         flipPage.current.gotoNextPage()
     }
@@ -135,7 +137,6 @@ export const goToPage = (name,category) => {
 
 export default props => {
     const classes = useStyles()
-    const NPAGES = 5
 
     flipPage = useRef(null)
 
@@ -147,8 +148,21 @@ export default props => {
         })
     })
 
+    const history = useHistory()
 
     const [page,setPage] = useSessionState('page',0)
+    const [modalOpen,setModalOpen] = useSessionState('modalOpen',false)
+    const [firstTime,setFirstTime] = useSessionState('firstTime',true)
+    const [dialOpen, setDialOpen] = useState(false)
+
+
+
+    // speed dial actions
+    const actions = [
+        { name: 'Home', icon: <Home/>, onClick: ()=>{history.push('/')} },
+        { name: 'Table of Contents', icon: <FormatListBulleted/>, onClick: ()=>{goToPage("Table","Of Contents")} },
+        { name: 'Help', icon: <Help/>, onClick: ()=>{setModalOpen(true)} }
+    ]
 
     useEffect(() => {
         window.addEventListener('keydown', downHandler);
@@ -160,7 +174,6 @@ export default props => {
 
 
     useEffect(() => {
-        console.log(page)
         if (!flipPage.current) return
         if (page > pages.length){
             flipPage.current.gotoPage(0)
@@ -169,7 +182,12 @@ export default props => {
             flipPage.current.gotoPage(page)
     },[flipPage])
 
-    console.log(page,pageNum(),flipPage)
+    useEffect(() => {
+        if (firstTime){
+            setModalOpen(true)
+            setFirstTime(false)
+        }
+    },[])
 
     return (
         <Container component='main' className={classes.root}>
@@ -189,6 +207,31 @@ export default props => {
                 </div>
             <FlipButton classes={{root: `${classes.flip} left`}} onClick={()=>{prev()}} hide={page===0}/>
             <FlipButton right classes={{root: `${classes.flip} right`}} onClick={()=>{next()}} hide={page===pages.length-1}/>
+
+            <SpeedDial
+                onClose={()=>{setDialOpen(false)}}
+                onOpen={()=>{setDialOpen(true)}}
+                open={dialOpen}
+                direction='up'
+                actions={actions}
+                ariaLabel={"Menu"}
+                icon={<Menu style={{fontSize: '2.5rem'}}/>}
+            />
+
+            <OkayDialog
+                title="Welcome!"
+                onClose={()=>{setModalOpen(false)}}
+                open={modalOpen}
+            >
+                <Typography paragraph>
+                    Sharing Stories is an interactive experiece. Many of the items on the pages are interactable and can take you to other pages.
+                    To simply flip the page, you can use your left and right arrows keys or the left and right buttons next to the book.
+                </Typography>
+                <Typography paragraph>
+                    You can use the menu in the bottom right corner to go back to the home page, flip to the table of contents, or view this help message again.
+                </Typography>
+            </OkayDialog>
+
         </Container>
     )
 

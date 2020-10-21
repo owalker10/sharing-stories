@@ -60,9 +60,18 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const pos = i => {
-    const r = Math.floor((2*i)/3)+1
-    const c = (2*i)%3+1
+const pos = (i,n) => {
+    let r,c
+    // diamond
+    if (n == 4){
+        r = Math.floor((2*i+1)/3)+1
+        c = (2*i+1)%3+1
+    }
+    // x shape
+    else {
+        r = Math.floor((2*i)/3)+1
+        c = (2*i)%3+1
+    }
     return `${r} / ${c} / ${r+1} / ${c+1}`
 }
 
@@ -81,7 +90,7 @@ export default ({header, images}) => {
             <img className={classes.header} src={header}/>
             <div className={classes.grid}>
                 {images.map((src,i)=>(
-                    <Item src={src} style={{gridArea: pos(i)}}/>
+                    <Item src={src} style={{gridArea: pos(i,images.length)}}/>
                 ))}
             </div>
         </div>

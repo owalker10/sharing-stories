@@ -3,8 +3,11 @@ import chars from '../data/characters'
 import { TableOfContents, Meet, Category } from '../components/pages'
 
 export const useSessionState = (key, defaultValue) => {
+    let storedValue = null
+    const json = sessionStorage.getItem(key)
+    if (json !== 'undefined') storedValue = JSON.parse(json)
     const [value, setValue] = React.useState(
-        JSON.parse(sessionStorage.getItem(key)) || defaultValue
+        storedValue !== null && storedValue !== undefined ? storedValue : defaultValue
     );
     
     React.useEffect(() => {
@@ -14,26 +17,18 @@ export const useSessionState = (key, defaultValue) => {
     return [value, setValue];
 }
 
-/*const categories = ['food','sports']
-// populate the pages
-let pages = [TableOfContents]
-chars.map((c,i)=>{
-    pages.push(Meet(i))
-    categories.map(c => {
-        pages.push(Category(i,c))
-    })
-})*/
+
+
+// Not currently in use ///////////////////////////////
 
 const initialState = {
 }
 
-// 1 indexed ugh
 const getPage = (name,category) => {
     
 }
 
 const reducer = (state, action) => {
-    console.log(state,action)
     switch(action.type){
         case 'SET_REF':
             //console.log(action.payload)

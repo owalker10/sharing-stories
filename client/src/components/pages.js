@@ -11,7 +11,7 @@ import words from '../assets/words'
 export const TextBased = ({ heading, paragraphs, center, ...props }) => {
     return (<div style={ center ?
         {height: '100%', display: 'flex',flexDirection:'column',justifyContent:'center'} : {}
-        }onClick={()=>{console.log('hello!')}}>
+        }>
             {heading ? (<>
                 <Heading>{heading[0]}</Heading>
                 <Spacer height={1}/>
