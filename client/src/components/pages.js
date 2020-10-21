@@ -8,10 +8,8 @@ import CategoryPictures, { Map } from './Category'
 import characters from '../data/characters'
 import words from '../assets/words'
 
-export const TextBased = ({ heading, paragraphs, center, ...props }) => {
-    return (<div style={ center ?
-        {height: '100%', display: 'flex',flexDirection:'column',justifyContent:'center'} : {}
-        }>
+export const TextBased = ({ heading, paragraphs, center, character, ...props }) => {
+    return (<div>
             {heading ? (<>
                 <Heading>{heading[0]}</Heading>
                 <Spacer height={1}/>
@@ -19,10 +17,19 @@ export const TextBased = ({ heading, paragraphs, center, ...props }) => {
                 <Spacer height={2}/>
                 <Divider/>
                 <Spacer height={10}/>
+            </>) : character ? (<>
+                <Subheading>{character}</Subheading>
+                <Spacer height={2}/>
+                <Divider/>
+                <Spacer height={10}/>
             </>) : null}
-            {paragraphs.map((p,i) => (
-                <Paragraph first={i==0 &&!center}>{p}</Paragraph>
-            ))}
+            <div style={ center ?
+                {height: '100%', display: 'flex',flexDirection:'column',justifyContent:'center'} : {}
+                }>
+                {paragraphs.map((p,i) => (
+                    <Paragraph first={i==0 &&!center}>{p}</Paragraph>
+                ))}
+            </div>
         </div>)
 }
 
@@ -47,6 +54,7 @@ export const Category = (i,category) => ([
     <TextBased
         center
         paragraphs={characters[i][category].text}
+        character={characters[i].name}
     />,
     (category == 'map' ? 
     <Map header={words[category].gif} images={characters[i][category].images} />

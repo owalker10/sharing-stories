@@ -121,11 +121,13 @@ export const next = () => {
     }
 }
 
-const downHandler = ({ key }) => {
-    if (key === 'ArrowLeft'){
+const downHandler = (event) => {
+    if (event.key === 'ArrowLeft'){
+        document.activeElement.blur();
         prev()
     }
-    if (key === 'ArrowRight'){
+    if (event.key === 'ArrowRight'){
+        document.activeElement.blur();
         next()
     }
 }

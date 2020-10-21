@@ -18,7 +18,7 @@ export default {
         images: [require('../../assets/food/chili_crab.png'),require('../../assets/food/kaya_toast.png'),require('../../assets/food/nasi_lemak.png'),require('../../assets/food/satay.png')]
     },
     map: {
-        text: [<span>Malaysia are Singapore are both countries in Southeast Asia. <b>Hover over the map to see a closer picture!</b></span>,
+        text: [<span>Malaysia and Singapore are both countries in Southeast Asia. <b>Hover over the map to see a closer picture!</b></span>,
             <span><b>Malaysia</b> is made up of Peninsular Malaysia and East Malaysia. It's population is about half indigenous Malays, a quarter Chinese, and various other South Asian ethnicities.</span>,
             <span><b>Singapore</b> is a little island that's both a city and a state. It's 450 times smaller than Malaysia! The people are predominantly Chinese but many are also Malay or Indian. People speak many different dialects and come from all sorts of places!</span>],
         images: [require('../../assets/map/ms_far.png'),require('../../assets/map/ms_close.png')]
