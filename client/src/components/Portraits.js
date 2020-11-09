@@ -3,6 +3,7 @@ import { makeStyles, Typography } from '@material-ui/core'
 import { Spacer } from './utils'
 import { prev, next, goToPage } from '../pages/Book'
 import '../styles/keyframes.css'
+import characters from '../data/characters'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -56,10 +57,19 @@ const useStyles = makeStyles(theme => ({
     },
     name: {
         fontSize: '1.3rem'
+    },
+    picture: {
+        position: 'absolute',
+        top: 0,
+        width: 'auto',
+        left: 0,
+        right: 0,
+        margin: '0 auto',
+        height: '100%'
     }
 }))
 
-const fake = ['Lizzy','Coming Soon','Coming Soon','Coming Soon','Coming Soon']
+const fake = ['Lizzy','Yasmine','Coming Soon','Coming Soon']
 
 export default () => {
     const classes = useStyles()
@@ -69,7 +79,11 @@ export default () => {
             {fake.map(name => {
                 return (
                     <div className={classes.container} onClick={()=>{goToPage(name,'meet')}}>
-                        <div className={`${classes.portrait} ${name=='Coming Soon' ? 'comingSoon' : ''}`}/>
+                        <div className={`${classes.portrait} ${name ==='Coming Soon' ? 'comingSoon' : ''}`}>
+                            {name !=='Coming Soon' ? 
+                            <img src={characters.find(c=>(c.name==name)).portrait} className={classes.picture}/>
+                            : null}
+                        </div>
                         <Spacer height={1}/>
                         <Typography className={classes.name}>{name}</Typography>
                     </div>

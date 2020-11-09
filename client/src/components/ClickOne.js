@@ -50,12 +50,12 @@ export default ({char}) => {
                 return (
                     <div className={classes.container} style={{gridArea: order[i]}}>
                         <CG srcs={words[name]}
-                        onClick={(categories.includes(name) ? ()=>{goToPage(char,name)} : null)}
+                        onClick={(categories.includes(name) ? ()=>{goToPage(char.name,name)} : null)}
                         />
                     </div>
                 )
             })}
-            <img src={Stick} className={classes.portrait}/>
+            <img src={char.portrait} className={classes.portrait}/>
         </div>
         </div>
     )

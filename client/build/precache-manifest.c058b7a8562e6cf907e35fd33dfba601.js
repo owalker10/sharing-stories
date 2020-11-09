@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c904a9f851c6f42774186193dc1aa35c",
+    "revision": "e92fa97b984e94c3a5c7f7a65183dd24",
     "url": "/index.html"
   },
   {
-    "revision": "5420fbaf04ad9240bc36",
-    "url": "/static/css/main.a8186877.chunk.css"
+    "revision": "dd527ca45293aeed9b5e",
+    "url": "/static/css/main.2d2fe49b.chunk.css"
   },
   {
-    "revision": "61196fae61e6b1e7f73e",
-    "url": "/static/js/2.44463e42.chunk.js"
+    "revision": "1932343ec59f41c46aaa",
+    "url": "/static/js/2.8dd3fe5e.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/static/js/2.44463e42.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.8dd3fe5e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5420fbaf04ad9240bc36",
-    "url": "/static/js/main.be3e8604.chunk.js"
+    "revision": "dd527ca45293aeed9b5e",
+    "url": "/static/js/main.2a173e11.chunk.js"
   },
   {
     "revision": "2bb9a9d88abd15b34e9b",
@@ -38,6 +38,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "eedff4dc92de0cf2dd3f70ff23b4c2fd",
     "url": "/static/media/clothing.eedff4dc.gif"
+  },
+  {
+    "revision": "bd1e30efdbda393fe1f136b94bd31359",
+    "url": "/static/media/cooked_snails.bd1e30ef.png"
+  },
+  {
+    "revision": "359b1abe809ff9c6348f449541b0e2a9",
+    "url": "/static/media/couscous.359b1abe.png"
   },
   {
     "revision": "654773cb756cd18723fe93e91b752bff",
@@ -62,6 +70,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "de55e75d9fb8c711e3fb0943c7951412",
     "url": "/static/media/kaya_toast.de55e75d.png"
+  },
+  {
+    "revision": "fa56639c3957bfeeef94f9dff7a73a23",
+    "url": "/static/media/lizzy.fa56639c.png"
   },
   {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
@@ -122,5 +134,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c4f079bd1f6ad64af602acacdc17ad54",
     "url": "/static/media/story.c4f079bd.gif"
+  },
+  {
+    "revision": "3a1abd6f2c9d68c4c1be0f6617b32907",
+    "url": "/static/media/tagine.3a1abd6f.png"
+  },
+  {
+    "revision": "1a7ae97c61c0b744511128e61781b31d",
+    "url": "/static/media/yasmine.1a7ae97c.png"
   }
 ]);

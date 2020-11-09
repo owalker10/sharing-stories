@@ -44,7 +44,7 @@ export const Meet = (i) => ([
         heading={[`Chapter ${i+1}`,characters[i].name]}
         paragraphs={characters[i].intro}
     />,
-    <ClickOne char={characters[i].name}/>
+    <ClickOne char={characters[i]}/>
 ])
 
 export const Category = (i,category) => ([

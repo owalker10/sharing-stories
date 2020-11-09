@@ -2,6 +2,7 @@ import React from 'react'
 
 export default {
     name: 'Lizzy',
+    portrait: require('../../assets/people/lizzy.png'),
     intro: ["Hi! My name is Lizzy and I grew up in Houston, Texas. My parents came to America from Singapore and Malaysia.",
         "Singapore and Malaysia are small countries in Southeast Asia. There are a lot of things that make these countries a little different to America, like the food, clothing, and sports! Click to find out more!"],
     sports: {
