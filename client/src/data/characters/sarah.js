@@ -8,7 +8,7 @@ export default {
         text: [<span><b>Baseball</b> and <b>soccer</b> are two of the most popular sports in Korea. Koreans take a lot of pride in their baseball and soccer teams. Furthermore, there are several professional Korean baseball players in the MLB and soccer players in the Premier League.</span>,
             <span>Korea also holds many <b>badminton</b> competitions and tournaments.</span>,
             <span>Last but certainly not least, <b>taekwondo</b>, otherwise known as Korean martial arts, is very popular. Taekwondo athletes wear doboks and specialize in many kicking techniques.</span>],
-        images: [require('../../assets/sports/soccer.png')]
+        images: [require('../../assets/sports/baseball.png'),require('../../assets/sports/soccer.png'),require('../../assets/sports/taekwondo.png')]
     },
     food: {
         text: [<span>My favorite Korean dish is <b>kimchi jjigae</b>! <b>Kimchi</b> is a staple Korean side dish of salted, seasoned, and fermented napa cabbage. It gives almost any Korean dish an added freshness and extra crunch. Add kimchi along with some pork or seafood and other vegetables to a pot of broth to make a stew called kimchi jjigae!</span>,

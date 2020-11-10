@@ -10,7 +10,7 @@ export default {
         images: [require('../../assets/sports/soccer.png')]
     },
     food: {
-        text: [<span>My favorite Moroccan dish is <b>Couscous</b>! Couscous is like tiny little balls of pasta made of grain that is topped with a meat and vegetable stew most of the time containing carrots, squash, zucchini, lamb or chicken. and  It also happens to be one of the most famous dishes from the Moroccan cuisine.</span>,
+        text: [<span>My favorite Moroccan dish is <b>Couscous</b>! Couscous is like tiny little balls of pasta made of grain that is topped with a meat and vegetable stew most of the time containing carrots, squash, zucchini, lamb or chicken. It also happens to be one of the most famous dishes from the Moroccan cuisine.</span>,
         <span>Another famous dish is <b>tagine</b> which is highly perfected in the way it's served. Tagine is a traditional stew made with either lamb or chicken meat, topped with veggies and is eaten with bread, no utensils! Tagine is served in a cone shaped ceramic pot.</span>,
         <span>Fun fact: another side dish Moroccans enjoy is cooked snails! (they're actually very yummy)
         </span>],

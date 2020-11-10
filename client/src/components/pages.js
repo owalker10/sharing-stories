@@ -33,7 +33,7 @@ export const TextBased = ({ heading, paragraphs, center, character, ...props }) 
 export const TableOfContents = [
         <TextBased
             heading={['Table of Contents','Meet the Characters!']}
-            paragraphs={['Welcome to Sharing Stories! We\'re excited for your to meet all our amazing characters!',
+            paragraphs={['Welcome to Sharing Stories! We\'re excited for you to meet all our amazing characters!',
                 'To start someone\'s story, click on their picture to the right. Or, flip through the book using the buttons or your arrow keys.']}
         />,
         <Portraits/>
