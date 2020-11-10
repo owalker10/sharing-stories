@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.2d2fe49b.chunk.css",
-    "main.js": "/static/js/main.2a173e11.chunk.js",
-    "main.js.map": "/static/js/main.2a173e11.chunk.js.map",
+    "main.js": "/static/js/main.3a14ce6e.chunk.js",
+    "main.js.map": "/static/js/main.3a14ce6e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3358e441.js",
     "runtime-main.js.map": "/static/js/runtime-main.3358e441.js.map",
-    "static/js/2.8dd3fe5e.chunk.js": "/static/js/2.8dd3fe5e.chunk.js",
-    "static/js/2.8dd3fe5e.chunk.js.map": "/static/js/2.8dd3fe5e.chunk.js.map",
+    "static/js/2.7542f99a.chunk.js": "/static/js/2.7542f99a.chunk.js",
+    "static/js/2.7542f99a.chunk.js.map": "/static/js/2.7542f99a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c058b7a8562e6cf907e35fd33dfba601.js": "/precache-manifest.c058b7a8562e6cf907e35fd33dfba601.js",
+    "precache-manifest.b6b1d3089283b9ebd1fac214ab2a75f0.js": "/precache-manifest.b6b1d3089283b9ebd1fac214ab2a75f0.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.2d2fe49b.chunk.css.map": "/static/css/main.2d2fe49b.chunk.css.map",
-    "static/js/2.8dd3fe5e.chunk.js.LICENSE.txt": "/static/js/2.8dd3fe5e.chunk.js.LICENSE.txt",
+    "static/js/2.7542f99a.chunk.js.LICENSE.txt": "/static/js/2.7542f99a.chunk.js.LICENSE.txt",
     "static/media/badminton.png": "/static/media/badminton.8c7aea25.png",
+    "static/media/bingsu.png": "/static/media/bingsu.fb56c25b.png",
     "static/media/chili_crab.png": "/static/media/chili_crab.705bbe1b.png",
     "static/media/clothing.png": "/static/media/clothing.3e2b5300.png",
     "static/media/clothing.gif": "/static/media/clothing.eedff4dc.gif",
@@ -24,6 +25,8 @@
     "static/media/holidays.gif": "/static/media/holidays.23a8709a.gif",
     "static/media/holidays.png": "/static/media/holidays.5b076857.png",
     "static/media/kaya_toast.png": "/static/media/kaya_toast.de55e75d.png",
+    "static/media/kimchi.png": "/static/media/kimchi.35aa13e2.png",
+    "static/media/kimchi_jjigae.png": "/static/media/kimchi_jjigae.41bad143.png",
     "static/media/lizzy.png": "/static/media/lizzy.fa56639c.png",
     "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg",
     "static/media/logo.png": "/static/media/logo.ad3d96a9.png",
@@ -33,6 +36,7 @@
     "static/media/ms_far.png": "/static/media/ms_far.1f6debe7.png",
     "static/media/nasi_lemak.png": "/static/media/nasi_lemak.b4f13451.png",
     "static/media/rugby.png": "/static/media/rugby.db0417e6.png",
+    "static/media/sarah.png": "/static/media/sarah.a44d117f.png",
     "static/media/satay.png": "/static/media/satay.9496566d.png",
     "static/media/soccer.png": "/static/media/soccer.c3ef30cd.png",
     "static/media/sports.gif": "/static/media/sports.515299a5.gif",
@@ -45,8 +49,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3358e441.js",
-    "static/js/2.8dd3fe5e.chunk.js",
+    "static/js/2.7542f99a.chunk.js",
     "static/css/main.2d2fe49b.chunk.css",
-    "static/js/main.2a173e11.chunk.js"
+    "static/js/main.3a14ce6e.chunk.js"
   ]
 }

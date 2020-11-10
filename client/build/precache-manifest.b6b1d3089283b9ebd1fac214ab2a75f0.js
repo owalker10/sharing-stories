@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e92fa97b984e94c3a5c7f7a65183dd24",
+    "revision": "150be0d18c1a6804aa849e70840784e6",
     "url": "/index.html"
   },
   {
-    "revision": "dd527ca45293aeed9b5e",
+    "revision": "ffb3d3dd75d0be6f43ca",
     "url": "/static/css/main.2d2fe49b.chunk.css"
   },
   {
-    "revision": "1932343ec59f41c46aaa",
-    "url": "/static/js/2.8dd3fe5e.chunk.js"
+    "revision": "8f4dda826d5fb55a5926",
+    "url": "/static/js/2.7542f99a.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/static/js/2.8dd3fe5e.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.7542f99a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dd527ca45293aeed9b5e",
-    "url": "/static/js/main.2a173e11.chunk.js"
+    "revision": "ffb3d3dd75d0be6f43ca",
+    "url": "/static/js/main.3a14ce6e.chunk.js"
   },
   {
     "revision": "2bb9a9d88abd15b34e9b",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8c7aea259c523eecaa97786f0efc79b7",
     "url": "/static/media/badminton.8c7aea25.png"
+  },
+  {
+    "revision": "fb56c25b70fdf4e177b3abe48c8df540",
+    "url": "/static/media/bingsu.fb56c25b.png"
   },
   {
     "revision": "705bbe1b623d99f7221bd116d652ec0d",
@@ -72,6 +76,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/kaya_toast.de55e75d.png"
   },
   {
+    "revision": "35aa13e2399d287ea7b475ab40d75a52",
+    "url": "/static/media/kimchi.35aa13e2.png"
+  },
+  {
+    "revision": "41bad14397d18d3e468e30edf0e5a060",
+    "url": "/static/media/kimchi_jjigae.41bad143.png"
+  },
+  {
     "revision": "fa56639c3957bfeeef94f9dff7a73a23",
     "url": "/static/media/lizzy.fa56639c.png"
   },
@@ -106,6 +118,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "db0417e60682e55a2302bbd6f97b60eb",
     "url": "/static/media/rugby.db0417e6.png"
+  },
+  {
+    "revision": "a44d117fa764c56cbc6497b4a807d9ef",
+    "url": "/static/media/sarah.a44d117f.png"
   },
   {
     "revision": "9496566d217fe37f22b5069bfe34897c",

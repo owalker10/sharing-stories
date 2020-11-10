@@ -8,8 +8,8 @@ to deploy:
 'npm run build' in /client
 COMMIT/PUSH TO MASTER
 'cd ..'
-    'heroku login'
-    'heroku git:remote -a sharing-stories'
+('heroku login')
+('heroku git:remote -a sharing-stories')
 'git push heroku master'
 
 */

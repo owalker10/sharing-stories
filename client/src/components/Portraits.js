@@ -69,7 +69,7 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const fake = ['Lizzy','Yasmine','Coming Soon','Coming Soon']
+const fake = ['Lizzy','Yasmine','Sarah','Coming Soon']
 
 export default () => {
     const classes = useStyles()
