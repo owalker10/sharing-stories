@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ee3ccacd068a85b58c168a9733140ef2",
+    "revision": "e45c31b16a9b6f0621fafdea7b9d73c6",
     "url": "/index.html"
   },
   {
-    "revision": "d6b5a073d8c50082ad45",
+    "revision": "5733ade7761739f0d49d",
     "url": "/static/css/main.2d2fe49b.chunk.css"
   },
   {
-    "revision": "ebb4cac1f7c9ffccb4e0",
-    "url": "/static/js/2.1c5b4dfe.chunk.js"
+    "revision": "9c6e22f14d1a08b3eb1e",
+    "url": "/static/js/2.bb774964.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/static/js/2.1c5b4dfe.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.bb774964.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d6b5a073d8c50082ad45",
-    "url": "/static/js/main.5bff73c5.chunk.js"
+    "revision": "5733ade7761739f0d49d",
+    "url": "/static/js/main.ee09e08f.chunk.js"
   },
   {
     "revision": "2bb9a9d88abd15b34e9b",
@@ -56,10 +56,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/couscous.359b1abe.png"
   },
   {
-    "revision": "654773cb756cd18723fe93e91b752bff",
-    "url": "/static/media/faces.654773cb.png"
-  },
-  {
     "revision": "3c5edde4c8aa9ae1ae21e8486372e262",
     "url": "/static/media/food.3c5edde4.gif"
   },
@@ -74,6 +70,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5b076857d3b8634e93f02b95353e871b",
     "url": "/static/media/holidays.5b076857.png"
+  },
+  {
+    "revision": "e4868834c75e3debc6425ad94a271200",
+    "url": "/static/media/jollof.e4868834.png"
   },
   {
     "revision": "de55e75d9fb8c711e3fb0943c7951412",
@@ -156,12 +156,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/story.c4f079bd.gif"
   },
   {
+    "revision": "1bc75e85fe8e7b44165308adeedd8b14",
+    "url": "/static/media/suya.1bc75e85.png"
+  },
+  {
     "revision": "5872fe71d02467ce4951549a9e5ed437",
     "url": "/static/media/taekwondo.5872fe71.png"
   },
   {
     "revision": "3a1abd6f2c9d68c4c1be0f6617b32907",
     "url": "/static/media/tagine.3a1abd6f.png"
+  },
+  {
+    "revision": "5a2ea8b895b971b71bb22ac81f69b8e2",
+    "url": "/static/media/the_end.5a2ea8b8.png"
+  },
+  {
+    "revision": "f3071ee3b122d47cb4f86120e6b53e53",
+    "url": "/static/media/theo.f3071ee3.png"
   },
   {
     "revision": "1a7ae97c61c0b744511128e61781b31d",

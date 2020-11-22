@@ -69,14 +69,14 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const fake = ['Lizzy','Yasmine','Sarah','Coming Soon']
 
 export default () => {
     const classes = useStyles()
     return (
         <div className={classes.root}>
         <div className={classes.grid}>
-            {fake.map(name => {
+            {characters.map(char => {
+                const name = char.name
                 return (
                     <div className={classes.container} onClick={()=>{goToPage(name,'meet')}}>
                         <div className={`${classes.portrait} ${name ==='Coming Soon' ? 'comingSoon' : ''}`}>

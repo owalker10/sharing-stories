@@ -2,14 +2,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useSessionState } from '../context'
 import { makeStyles } from '@material-ui/core/styles'
 import { Home, FormatListBulleted, Help, Menu } from '@material-ui/icons'
-import { Container, Typography, Divider } from '@material-ui/core'
+import { Container, Typography } from '@material-ui/core'
 import { FlipButton, SpeedDial } from '../components/buttons'
 import { OkayDialog } from '../components/dialogs'
-import { TextBased, TableOfContents, Meet, Category } from '../components/pages'
-import { Spacer } from '../components/utils'
-import { Paragraph, Heading, Subheading } from '../styles/type'
+import { TableOfContents, Meet, Category, TheEnd } from '../components/pages'
 import FlipPage from 'react-flip-page'
-import faces from '../assets/faces.png'
 import chars from '../data/characters'
 import { useHistory } from 'react-router-dom'
 
@@ -149,6 +146,7 @@ export default props => {
             pages.push(Category(i,c))
         })
     })
+    pages.push(TheEnd)
 
     const history = useHistory()
 

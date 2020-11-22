@@ -7,6 +7,7 @@ import ClickOne from './ClickOne'
 import CategoryPictures, { Map } from './Category'
 import characters from '../data/characters'
 import words from '../assets/words'
+import TheEndPNG from '../assets/the_end.png'
 
 export const TextBased = ({ heading, paragraphs, center, character, ...props }) => {
     return (<div style={{height:'100%', postition: 'relative', display: 'flex', flexDirection: 'column'}}>
@@ -57,3 +58,28 @@ export const Category = (i,category) => ([
     <Map header={words[category].gif} images={characters[i][category].images} />
     : <CategoryPictures header={words[category].gif} images={characters[i][category].images}/>)
 ])
+
+const BoxStyle = {
+    display:'flex',
+    flexDirection:'column',
+    alignItems:'center',
+    justifyContent:'center',
+    border: '1px solid rgba(0, 0, 0, 0.87)',
+    padding: '10px 40px'
+}
+
+const TheEndStyle = {
+    fontWeight: 400,
+    fontSize: '10rem'
+}
+
+export const TheEnd = [
+    <TextBased
+        center
+        paragraphs={["Thank you for letting us share our stories! Even though we're all from Austin, we all come from different backgrounds that shape who we are.",
+            "We hope this book inspires you to learn more about the stories of people in your life. Everyone has one, and no two are the same!"]}
+    />,
+    <div style={{height:'100%', postition: 'relative', display: 'flex', flexDirection: 'column', alignItems:'center',justifyContent:'center'}}>
+        <img src={TheEndPNG} style={{width:'100%'}}/>
+    </div>
+]
