@@ -17,8 +17,8 @@ export default {
         images: [require('../../assets/food/suya.png'),require('../../assets/food/jollof.png')]
     },
     map: {
-        text: [<span><b>Nigeria</b> is a country in West Africa and has a population of almost 200 million, making it the most populous country in Africa. It is a federal republic comprising 36 states and the Federal Capital Territory, where the capital, Abuja, is located.</span>,
+        text: [<span><b>Nigeria</b> is a country in West Africa and has a population of almost 200 million, making it the most populous country in Africa. It is a federal republic comprising 36 states and the Federal Capital Territory, where the capital, Abuja, is located. <b>Hover over the map to see a closer picture!</b></span>,
             <span>Nigeria is what's called a multinational state, meaning it's got a lot of different types of people! There are more than 250 ethnic groups speaking over 500 languages. It's only official language is English and most people are either Muslim or Christian.</span>],
-        images: []
+        images: [require('../../assets/map/nigeria_far.png'),require('../../assets/map/nigeria_close.png')]
     }
 }

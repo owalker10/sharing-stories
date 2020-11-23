@@ -17,8 +17,8 @@ export default {
         images: [require('../../assets/food/couscous.png'),require('../../assets/food/tagine.png'),require('../../assets/food/cooked_snails.png')]
     },
     map: {
-        text: [<span><b>Morocco</b> is a country in North Africa and has a population of over 36 million. Together with Spain, it forms the Strait of Gibraltar.</span>,
+        text: [<span><b>Morocco</b> is a country in North Africa and has a population of over 36 million. Together with Spain, it forms the Strait of Gibraltar. <b>Hover over the map to see a closer picture!</b></span>,
             <span>Morocco's predominant religion is <b>Islam</b>, and its official languages are <b>Arabic</b> and <b>Berber</b>. The Moroccan dialect of Arabic, referred to as Darija, and French are also widely spoken. Moroccan culture is a blend of Berber, Arab, Sephardi Jews, West African and European influences.</span>],
-        images: []
+        images: [require('../../assets/map/morocco_far.png'),require('../../assets/map/morocco_close.png')]
     }
 }

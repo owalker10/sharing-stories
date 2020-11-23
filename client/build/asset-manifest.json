@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.2d2fe49b.chunk.css",
-    "main.js": "/static/js/main.ee09e08f.chunk.js",
-    "main.js.map": "/static/js/main.ee09e08f.chunk.js.map",
+    "main.js": "/static/js/main.d08d68c8.chunk.js",
+    "main.js.map": "/static/js/main.d08d68c8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3358e441.js",
     "runtime-main.js.map": "/static/js/runtime-main.3358e441.js.map",
-    "static/js/2.bb774964.chunk.js": "/static/js/2.bb774964.chunk.js",
-    "static/js/2.bb774964.chunk.js.map": "/static/js/2.bb774964.chunk.js.map",
+    "static/js/2.7958bfc2.chunk.js": "/static/js/2.7958bfc2.chunk.js",
+    "static/js/2.7958bfc2.chunk.js.map": "/static/js/2.7958bfc2.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.17be5f7c2004f7ac052b62c7f88935bb.js": "/precache-manifest.17be5f7c2004f7ac052b62c7f88935bb.js",
+    "precache-manifest.917682527100aa78c5c7744d63674ba9.js": "/precache-manifest.917682527100aa78c5c7744d63674ba9.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.2d2fe49b.chunk.css.map": "/static/css/main.2d2fe49b.chunk.css.map",
-    "static/js/2.bb774964.chunk.js.LICENSE.txt": "/static/js/2.bb774964.chunk.js.LICENSE.txt",
+    "static/js/2.7958bfc2.chunk.js.LICENSE.txt": "/static/js/2.7958bfc2.chunk.js.LICENSE.txt",
     "static/media/badminton.png": "/static/media/badminton.8c7aea25.png",
     "static/media/baseball.png": "/static/media/baseball.6d8f4b56.png",
     "static/media/bingsu.png": "/static/media/bingsu.fb56c25b.png",
@@ -33,12 +33,18 @@
     "static/media/logo.png": "/static/media/logo.ad3d96a9.png",
     "static/media/map.gif": "/static/media/map.a37999c6.gif",
     "static/media/map.png": "/static/media/map.ae723884.png",
+    "static/media/morocco_close.png": "/static/media/morocco_close.6dad3db7.png",
+    "static/media/morocco_far.png": "/static/media/morocco_far.3d58f81c.png",
     "static/media/ms_close.png": "/static/media/ms_close.660ca09a.png",
     "static/media/ms_far.png": "/static/media/ms_far.1f6debe7.png",
     "static/media/nasi_lemak.png": "/static/media/nasi_lemak.b4f13451.png",
+    "static/media/nigeria_close.png": "/static/media/nigeria_close.0aa81721.png",
+    "static/media/nigeria_far.png": "/static/media/nigeria_far.a6b1296f.png",
     "static/media/rugby.png": "/static/media/rugby.db0417e6.png",
     "static/media/sarah.png": "/static/media/sarah.a44d117f.png",
     "static/media/satay.png": "/static/media/satay.9496566d.png",
+    "static/media/sk_close.png": "/static/media/sk_close.3b6020a9.png",
+    "static/media/sk_far.png": "/static/media/sk_far.9c46c78c.png",
     "static/media/soccer.png": "/static/media/soccer.c3ef30cd.png",
     "static/media/sports.gif": "/static/media/sports.515299a5.gif",
     "static/media/sports.png": "/static/media/sports.d83e5d1d.png",
@@ -54,8 +60,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3358e441.js",
-    "static/js/2.bb774964.chunk.js",
+    "static/js/2.7958bfc2.chunk.js",
     "static/css/main.2d2fe49b.chunk.css",
-    "static/js/main.ee09e08f.chunk.js"
+    "static/js/main.d08d68c8.chunk.js"
   ]
 }

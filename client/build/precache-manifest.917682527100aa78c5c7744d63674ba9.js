@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e45c31b16a9b6f0621fafdea7b9d73c6",
+    "revision": "2f6662f467b4b941e2df05402501abfe",
     "url": "/index.html"
   },
   {
-    "revision": "5733ade7761739f0d49d",
+    "revision": "b0f16fdbd1b65d2f38ff",
     "url": "/static/css/main.2d2fe49b.chunk.css"
   },
   {
-    "revision": "9c6e22f14d1a08b3eb1e",
-    "url": "/static/js/2.bb774964.chunk.js"
+    "revision": "2e9e839ef9a65e0e60e8",
+    "url": "/static/js/2.7958bfc2.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/static/js/2.bb774964.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.7958bfc2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5733ade7761739f0d49d",
-    "url": "/static/js/main.ee09e08f.chunk.js"
+    "revision": "b0f16fdbd1b65d2f38ff",
+    "url": "/static/js/main.d08d68c8.chunk.js"
   },
   {
     "revision": "2bb9a9d88abd15b34e9b",
@@ -108,6 +108,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/map.ae723884.png"
   },
   {
+    "revision": "6dad3db7086a5b7b9a242d3548a6aaa8",
+    "url": "/static/media/morocco_close.6dad3db7.png"
+  },
+  {
+    "revision": "3d58f81c630103f54b0503cd8211eb60",
+    "url": "/static/media/morocco_far.3d58f81c.png"
+  },
+  {
     "revision": "660ca09a34f3cae02a58c40bf3470979",
     "url": "/static/media/ms_close.660ca09a.png"
   },
@@ -120,6 +128,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/nasi_lemak.b4f13451.png"
   },
   {
+    "revision": "0aa817213ee5b3740a0c86744bfc8560",
+    "url": "/static/media/nigeria_close.0aa81721.png"
+  },
+  {
+    "revision": "a6b1296fd6c6b76db64f6f92b06d177e",
+    "url": "/static/media/nigeria_far.a6b1296f.png"
+  },
+  {
     "revision": "db0417e60682e55a2302bbd6f97b60eb",
     "url": "/static/media/rugby.db0417e6.png"
   },
@@ -130,6 +146,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9496566d217fe37f22b5069bfe34897c",
     "url": "/static/media/satay.9496566d.png"
+  },
+  {
+    "revision": "3b6020a99a0891c76e5610ceaaa7e03d",
+    "url": "/static/media/sk_close.3b6020a9.png"
+  },
+  {
+    "revision": "9c46c78c4369d40ed9d647988023ef4a",
+    "url": "/static/media/sk_far.9c46c78c.png"
   },
   {
     "revision": "c3ef30cd7dfec7f22a337ba8ce6dae33",

@@ -3,7 +3,8 @@ import React from 'react'
 export default {
     name: 'Sarah',
     portrait: require('../../assets/people/sarah.png'),
-    intro: ["Hi there! My name is Sarah Joohee Choi, and I'm from Austin, Texas. [work in progres]"],
+    intro: ["Hello! My name is Sarah Joohee Choi, and I was born and raised in Austin, Texas. Both of my parents were born and raised in South Korea, but they attended Baylor University.",
+        "Growing up, my parents encouraged my brother and I to continue speaking Korean in our home, so I'm bilingual! However, I’m still more comfortable with English."],
     sports: {
         text: [<span><b>Baseball</b> and <b>soccer</b> are two of the most popular sports in Korea. Koreans take a lot of pride in their baseball and soccer teams. Furthermore, there are several professional Korean baseball players in the MLB and soccer players in the Premier League.</span>,
             <span>Korea also holds many <b>badminton</b> competitions and tournaments.</span>,
@@ -17,8 +18,8 @@ export default {
         images: [require('../../assets/food/kimchi_jjigae.png'),require('../../assets/food/bingsu.png'),require('../../assets/food/kimchi.png')]
     },
     map: {
-        text: [<span><b>South Korea</b> is a country located in the southern part of the Korean Peninsula, in East Asia. Its population is 51 million but about half live in the Seoul metropolitan area.</span>,
+        text: [<span><b>South Korea</b> is a country located in the southern part of the Korean Peninsula, in East Asia. Its population is 51 million but about half live in the Seoul metropolitan area. <b>Hover over the map to see a closer picture!</b></span>,
             <span>96% of the population is ethnically Korena, and the official language is Korean. Many people follow either Christianity or Buddhism.</span>],
-        images: []
+            images: [require('../../assets/map/sk_far.png'),require('../../assets/map/sk_close.png')]
     }
 }
