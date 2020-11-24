@@ -1,27 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2f6662f467b4b941e2df05402501abfe",
+    "revision": "4e3647f77f7960bc5c2b7bee2d094fd0",
     "url": "/index.html"
   },
   {
-    "revision": "b0f16fdbd1b65d2f38ff",
+    "revision": "a0fd213081f5889914d7",
     "url": "/static/css/main.2d2fe49b.chunk.css"
   },
   {
-    "revision": "2e9e839ef9a65e0e60e8",
-    "url": "/static/js/2.7958bfc2.chunk.js"
+    "revision": "c8440c1fe08a3ce75132",
+    "url": "/static/js/2.c2681e58.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/static/js/2.7958bfc2.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.c2681e58.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b0f16fdbd1b65d2f38ff",
-    "url": "/static/js/main.d08d68c8.chunk.js"
+    "revision": "a0fd213081f5889914d7",
+    "url": "/static/js/main.00b616e8.chunk.js"
   },
   {
     "revision": "2bb9a9d88abd15b34e9b",
     "url": "/static/js/runtime-main.3358e441.js"
+  },
+  {
+    "revision": "ec75b10817ebfdc4c73cb53391fdf602",
+    "url": "/static/media/Dashiki_Isiagu.ec75b108.png"
+  },
+  {
+    "revision": "a0ddb7fa182817c3608e9352fd172a25",
+    "url": "/static/media/Hanbok.a0ddb7fa.png"
+  },
+  {
+    "revision": "7a098ff369589d4b6f7802144338fc15",
+    "url": "/static/media/Jelaba.7a098ff3.png"
+  },
+  {
+    "revision": "c4a9f3be90b403d78e9da92385bc897f",
+    "url": "/static/media/Kabaya.c4a9f3be.png"
   },
   {
     "revision": "8c7aea259c523eecaa97786f0efc79b7",

@@ -18,6 +18,15 @@ export default {
         <span><b>Nasi Lemak</b> is a very popular dish in Malaysia. It is coconut rice with toppings like meat, egg, or spicy chili.</span>],
         images: [require('../../assets/food/chili_crab.png'),require('../../assets/food/kaya_toast.png'),require('../../assets/food/nasi_lemak.png'),require('../../assets/food/satay.png')]
     },
+    clothing: {
+        text: [<span>Traditional Singaporean and Malaysian clothing includes the <b>sarong kabaya</b> and baju kurung, worn by women out of respect for tradition and culture. I have a sarong kabaya that is red with a traditional pattern printed on it!</span>,
+        <span>Traditional Chinese clothing includes the cheongsam, which is a long printed dress worn for special occasions.</span>],
+        images: [require('../../assets/clothing/Kabaya.png')]
+    },
+    holidays: {
+        text: [<span>My family is ethnically Chinese. This means, even though my parents aren't from China, many many years ago their great grandparents and relatives came from China. In Singapore and Malaysia, a lot of people have Chinese heritage. Because of this, the <b>Chinese New Year</b> is celebrated every year. It's also called the Lunar New Year, because the dates of the holiday follow the moon phases. We celebrate with red decorations, bright lanterns, fireworks, and a festival! Families eat yummy foods like dumplings, and exchange gifts such as red envelopes with money.</span>],
+        images: []
+    },
     map: {
         text: [<span>Malaysia and Singapore are both countries in Southeast Asia. <b>Hover over the map to see a closer picture!</b></span>,
             <span><b>Malaysia</b> is made up of Peninsular Malaysia and East Malaysia. Its population is about half indigenous Malays, a quarter Chinese, and various other South Asian ethnicities.</span>,

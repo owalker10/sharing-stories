@@ -17,6 +17,16 @@ export default {
         <span><b>Bingsu</b> is my favorite Korean dessert. This Korean shaved ice dessert is most commonly topped with sweet red beans or the fruit along with some condensed milk.</span>],
         images: [require('../../assets/food/kimchi_jjigae.png'),require('../../assets/food/bingsu.png'),require('../../assets/food/kimchi.png')]
     },
+    clothing: {
+        text: [<span>A <b>hanbok</b> is a traditional Korean two-piece worn for special occasions and festivities, such as Korean New Year, Chuseok, and weddings. Hanboks feature vibrant colors and different patterns.</span>],
+        images: [require('../../assets/clothing/Hanbok.png')]
+    },
+    holidays: {
+        text: [<span><b>Korean New Year</b>, also called Seollal, is the celebration of the first day of the Korean calendar. It's a large celebration with lots of traditional foods and games with extended family.</span>,
+        <span><b>Chuseok</b> is the three day Korean harvest festival where families gather in their hometown, pay respects to their ancestors, and celebrate the harvest with a large feast.</span>,
+        <span>Koreans also have <b>Children's Day</b>, where children are celebrated. Many parents take their children to the amusement park, the zoo, or on a picnic!</span>],
+        images: []
+    },   
     map: {
         text: [<span><b>South Korea</b> is a country located in the southern part of the Korean Peninsula, in East Asia. Its population is 51 million but about half live in the Seoul metropolitan area. <b>Hover over the map to see a closer picture!</b></span>,
             <span>96% of the population is ethnically Korena, and the official language is Korean. Many people follow either Christianity or Buddhism.</span>],

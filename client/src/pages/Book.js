@@ -89,7 +89,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-export const categories = ['food','sports','map']
+export const categories = ['food','sports','clothing','holidays','map']
 // populate the pages
 let pages
 

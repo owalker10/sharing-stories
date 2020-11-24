@@ -16,6 +16,17 @@ export default {
         <span>Another Nigerian food I really like is <b>jollof</b> rice, rice simmered in spices and tomato. It’s easy to make and dangerous, because once I have a bite I always finish my plate and ask for seconds.</span>],
         images: [require('../../assets/food/suya.png'),require('../../assets/food/jollof.png')]
     },
+    clothing: {
+        text: [<span>Nigerian fashion is a combination of a conservative past and a flashy, fun present. For example, although women don't generally wear head coverings because of religion anymore, they stuck around as a fashion statement!</span>,
+        <span>Nigerians like big beautiful patterns, matching or showy colors, and being comfortable. Men like wearing <b>Isiagu</b> shirts with each-catching patterns and both men and women wear <b>dashiki</b>, casual shirts that keep you cool in the African heat.</span>],
+        images: [require('../../assets/clothing/Dashiki_Isiagu.png')]
+    },
+    holidays: {
+        text: [<span>A funny thing is, even though my parents grew up on different continents, they celebrated the same holidays, just in different ways. For <b>Easter</b>, my mom ate lots of chocolate, whereas my dad spent the day celebrating with his village.</span>,
+        <span>For <b>Christmas</b>, my dad spent a quiet day with family, but my mom was always super busy helping her mom cook a huge feast for all their extended family.</span>,
+        <span>Now in our household, we combine the two-- lots of food, family, and also rest.</span>],
+        images: []
+    },
     map: {
         text: [<span><b>Nigeria</b> is a country in West Africa and has a population of almost 200 million, making it the most populous country in Africa. It is a federal republic comprising 36 states and the Federal Capital Territory, where the capital, Abuja, is located. <b>Hover over the map to see a closer picture!</b></span>,
             <span>Nigeria is what's called a multinational state, meaning it's got a lot of different types of people! There are more than 250 ethnic groups speaking over 500 languages. It's only official language is English and most people are either Muslim or Christian.</span>],
