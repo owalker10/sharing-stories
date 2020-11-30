@@ -25,7 +25,7 @@ export default {
     },
     holidays: {
         text: [<span>My family is ethnically Chinese. This means, even though my parents aren't from China, many many years ago their great grandparents and relatives came from China. In Singapore and Malaysia, a lot of people have Chinese heritage. Because of this, the <b>Chinese New Year</b> is celebrated every year. It's also called the Lunar New Year, because the dates of the holiday follow the moon phases. We celebrate with red decorations, bright lanterns, fireworks, and a festival! Families eat yummy foods like dumplings, and exchange gifts such as red envelopes with money.</span>],
-        images: []
+        images: [require('../../assets/holidays/chinese_new_year.png')]
     },
     map: {
         text: [<span>Malaysia and Singapore are both countries in Southeast Asia. <b>Hover over the map to see a closer picture!</b></span>,

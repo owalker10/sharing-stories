@@ -25,7 +25,7 @@ export default {
         text: [<span><b>Korean New Year</b>, also called Seollal, is the celebration of the first day of the Korean calendar. It's a large celebration with lots of traditional foods and games with extended family.</span>,
         <span><b>Chuseok</b> is the three day Korean harvest festival where families gather in their hometown, pay respects to their ancestors, and celebrate the harvest with a large feast.</span>,
         <span>Koreans also have <b>Children's Day</b>, where children are celebrated. Many parents take their children to the amusement park, the zoo, or on a picnic!</span>],
-        images: []
+        images: [require('../../assets/holidays/chuseok.png')]
     },   
     map: {
         text: [<span><b>South Korea</b> is a country located in the southern part of the Korean Peninsula, in East Asia. Its population is 51 million but about half live in the Seoul metropolitan area. <b>Hover over the map to see a closer picture!</b></span>,

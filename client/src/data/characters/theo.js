@@ -25,7 +25,7 @@ export default {
         text: [<span>A funny thing is, even though my parents grew up on different continents, they celebrated the same holidays, just in different ways. For <b>Easter</b>, my mom ate lots of chocolate, whereas my dad spent the day celebrating with his village.</span>,
         <span>For <b>Christmas</b>, my dad spent a quiet day with family, but my mom was always super busy helping her mom cook a huge feast for all their extended family.</span>,
         <span>Now in our household, we combine the two-- lots of food, family, and also rest.</span>],
-        images: []
+        images: [require('../../assets/holidays/nigerian.png')]
     },
     map: {
         text: [<span><b>Nigeria</b> is a country in West Africa and has a population of almost 200 million, making it the most populous country in Africa. It is a federal republic comprising 36 states and the Federal Capital Territory, where the capital, Abuja, is located. <b>Hover over the map to see a closer picture!</b></span>,

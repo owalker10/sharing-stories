@@ -23,7 +23,7 @@ export default {
     holidays: {
         text: [<span>With a population that is majority Muslim, many people from Morocco celebrate the Islamic holidays <b>Ramadan</b> and <b>Eid</b>.</span>,
         <span>Ramadan is a month where Muslims fast from sunrise to sundown and take part in spiritual rejuvenation. Following Ramadan is a celebratory holiday called Eid, which is also known as "the festival of breaking fast". Muslims attend prayer, wear their nicest clothes, eat great food, and celebrate with friends and family!</span>],
-        images: []
+        images: [require('../../assets/holidays/eid.png')]
     },
     map: {
         text: [<span><b>Morocco</b> is a country in North Africa and has a population of over 36 million. Together with Spain, it forms the Strait of Gibraltar. <b>Hover over the map to see a closer picture!</b></span>,

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e3647f77f7960bc5c2b7bee2d094fd0",
+    "revision": "66fdd9110dff449643d4cc4390c2584f",
     "url": "/index.html"
   },
   {
-    "revision": "a0fd213081f5889914d7",
+    "revision": "3ec71ab4388d65f81ace",
     "url": "/static/css/main.2d2fe49b.chunk.css"
   },
   {
-    "revision": "c8440c1fe08a3ce75132",
-    "url": "/static/js/2.c2681e58.chunk.js"
+    "revision": "ed407214e37b905a10df",
+    "url": "/static/js/2.9d61f378.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/static/js/2.c2681e58.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.9d61f378.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a0fd213081f5889914d7",
-    "url": "/static/js/main.00b616e8.chunk.js"
+    "revision": "3ec71ab4388d65f81ace",
+    "url": "/static/js/main.af0d34ff.chunk.js"
   },
   {
     "revision": "2bb9a9d88abd15b34e9b",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Jelaba.7a098ff3.png"
   },
   {
-    "revision": "c4a9f3be90b403d78e9da92385bc897f",
-    "url": "/static/media/Kabaya.c4a9f3be.png"
+    "revision": "4aeba93c808443546b1a0d792f1bd53a",
+    "url": "/static/media/Kabaya.4aeba93c.png"
   },
   {
     "revision": "8c7aea259c523eecaa97786f0efc79b7",
@@ -56,6 +56,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/chili_crab.705bbe1b.png"
   },
   {
+    "revision": "69f6e27f62762b7330acb865447366a3",
+    "url": "/static/media/chinese_new_year.69f6e27f.png"
+  },
+  {
+    "revision": "cb683349ade521ffda4927632b749b72",
+    "url": "/static/media/chuseok.cb683349.png"
+  },
+  {
     "revision": "3e2b530093a2bd5216ccb3ae93560dfe",
     "url": "/static/media/clothing.3e2b5300.png"
   },
@@ -70,6 +78,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "359b1abe809ff9c6348f449541b0e2a9",
     "url": "/static/media/couscous.359b1abe.png"
+  },
+  {
+    "revision": "aad040a0a816d11a303ef484dc0941a3",
+    "url": "/static/media/eid.aad040a0.png"
   },
   {
     "revision": "3c5edde4c8aa9ae1ae21e8486372e262",
@@ -150,6 +162,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a6b1296fd6c6b76db64f6f92b06d177e",
     "url": "/static/media/nigeria_far.a6b1296f.png"
+  },
+  {
+    "revision": "645707c23b9a647d57db0834d676231f",
+    "url": "/static/media/nigerian.645707c2.png"
   },
   {
     "revision": "db0417e60682e55a2302bbd6f97b60eb",
